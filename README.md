@@ -69,13 +69,17 @@ All the monitoring lives in Grafana, behind a single login, and it runs on the s
 
 Dashboard screenshots will follow in a later version of this repository.
 
+## Where the tests run
+
+The checks of every change run in a virtual machine at my house, registered in GitHub as a self-hosted runner, because the free GitHub Actions minutes were not enough for me. GitHub still keeps the history and shows the results on each pull request. The decision, the problems I found and the limits are in [docs/CI-AND-INFRASTRUCTURE.md](docs/CI-AND-INFRASTRUCTURE.md).
+
 ## Privacy by design
 
 An account stores only a random identifier, the opaque identifier that Google assigns to the Google account, and the creation date. I never store a name, an email address or a photo. The name shown next to "Signed in as" is read from the Google sign-in in the visitor's own browser, and it never reaches my server. Guests can use the Reading exams without an account, and an attempt made without an account is linked only to a random identifier.
 
 ## What is next
 
-The main limitation today is the size of the exam bank. After that, I want to add an uptime check that runs outside the server, so that an outage of the main machine does not silence the alerts, and I want to add the dashboard screenshots to this repository.
+The main limitation today is the size of the exam bank. After that, I want to add an uptime check that runs outside the server, so that an outage of the main machine does not silence the alerts, and I want to add the dashboard screenshots to this repository. For the tests, I want to add a second runner so that two jobs can run at the same time.
 
 ## Contact
 

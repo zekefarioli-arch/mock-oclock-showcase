@@ -83,4 +83,4 @@ The backend restarts for about a minute during an update, so I check that nobody
 
 ## Tests
 
-The backend has unit tests and integration tests that run against a real PostgreSQL in a container (Testcontainers). The frontend has component tests with React Testing Library and mocked network calls, plus end-to-end tests with Playwright that drive the real interface. GitHub Actions runs all of them on every change. The limitation is that there is no staging copy of the site, so these tests are the only safety net before a change reaches the live site.
+The backend has unit tests and integration tests that run against a real PostgreSQL in a container (Testcontainers). The frontend has component tests with React Testing Library and mocked network calls, plus end-to-end tests with Playwright that drive the real interface. GitHub Actions runs all of them on every change, on a runner that I host in a virtual machine at home (see [where the tests run](CI-AND-INFRASTRUCTURE.md)). The limitation is that there is no staging copy of the site, so these tests are the only safety net before a change reaches the live site.
